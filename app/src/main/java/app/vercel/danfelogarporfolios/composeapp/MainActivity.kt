@@ -6,12 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import app.vercel.danfelogarporfolios.composeapp.components.MyButton
 import app.vercel.danfelogarporfolios.composeapp.components.MyCard
+import app.vercel.danfelogarporfolios.composeapp.components.MyDialogs
 import app.vercel.danfelogarporfolios.composeapp.components.MyProgressAdvance
 import app.vercel.danfelogarporfolios.composeapp.components.MyProgressBar
 import app.vercel.danfelogarporfolios.composeapp.components.MySliders
@@ -31,6 +33,7 @@ import app.vercel.danfelogarporfolios.composeapp.login.Greeting
 import app.vercel.danfelogarporfolios.composeapp.ui.theme.ComposeAppTheme
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,7 +44,7 @@ class MainActivity : ComponentActivity() {
 //                        name = "Android :3",
 //                        modifier = Modifier.padding(innerPadding)
 //                    )
-                    MySliders(
+                    MyDialogs(
                         Modifier.padding(innerPadding)
                     )
                 }
