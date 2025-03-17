@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -21,10 +22,10 @@ import androidx.compose.ui.unit.dp
     showBackground = true
 )
 @Composable
-fun MyButton(modifier: Modifier = Modifier){
+fun MyButton(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-    ){
+    ) {
         Button(
             onClick = {
                 Log.i("DanfelogarInf", "Holo Holo")
@@ -67,6 +68,15 @@ fun MyButton(modifier: Modifier = Modifier){
 
         FilledTonalButton(onClick = {}) {
             Text("Danfelogar FilledTonalButton")
+        }
+
+        ElevatedButton(
+            onClick = {},
+            elevation = ButtonDefaults.elevatedButtonElevation(
+                defaultElevation = 26.dp
+            )
+        ) {
+            Text("Danfelogar ElevatedButton")
         }
     }
 }

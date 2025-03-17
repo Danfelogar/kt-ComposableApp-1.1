@@ -59,4 +59,5 @@ dependencies {
 
     implementation(libs.constraint.layout)
     implementation(libs.icons.extended)
+    implementation(libs.compose.navigation)
 }
